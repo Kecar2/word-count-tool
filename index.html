@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Word Length Calcuator</title>
 </head>
+
 <body>
-    <h1>Type a word in the box</h1>
-    <input type="text" id="str">
-    <div id="output"></div>
-    <button id="btn"><h2>Click to calculate word length</h2></button>
+
+    <div id="app">
+        <h1>Type a word in the box</h1>
+        <input v-model="textInput" type="text" id="str">
+        <div :style="{'color': setColorNumber() }" v-if="showTextLength" id="output"> {{ showTextLength.length }} </div>
+        <button @click="calculate" id="btn">
+            <h2>Click to calculate word length</h2>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>
 </body>
 </html>

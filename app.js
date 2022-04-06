@@ -1,9 +1,22 @@
-let button = document.getElementById('btn');
+Vue.createApp({
+    data() {
+        return {
+            // Estado de la app
+            textInput: '',
+            showTextLength: '',
+        }
+    },
+    methods: {
+        calculate() {
 
-button.addEventListener('click', function(){
-    let word = document.getElementById('str').value;
-    let count = word.length;
-    let outputDiv = document.getElementById('output');
+        this.showTextLength = this.textInput;
 
-    outputDiv.innerHTML = `<h1>${count}</h1>`
-});
+        },
+        setColorNumber() {
+            if (this.showTextLength.length % 2 == 0) {
+                return 'blue';
+            }
+            return 'red';
+        }
+    }
+}).mount('#app')

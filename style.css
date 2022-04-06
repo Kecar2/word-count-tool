@@ -1,5 +1,5 @@
 body{
-    background-color:#FA8072;
+    background-color:#070707;
     text-align: center;
 }
 
@@ -22,9 +22,8 @@ input{
 
 #btn{
     width: 350px;
-    height: 80px;
     color: #fff;
-    background-color:blue;
+    background-color:rgb(0, 0, 148);
     border-style: none;
     border-radius: 15px;
     margin-top: 100px;
@@ -33,6 +32,6 @@ input{
 
 h1{
     
-    color: #000;
+    color: rgba(255, 0, 0, 0.726);
     margin-top: 50px;
 }
